@@ -12,7 +12,7 @@
         android:id="@+id/even_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="@dimen/padding_common_small"
+        android:layout_marginEnd="@dimen/padding_common_medium"
         app:layout_constraintEnd_toStartOf="@+id/even_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/even_title"
