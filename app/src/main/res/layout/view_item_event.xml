@@ -2,46 +2,76 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/padding_common_large"
-    android:paddingTop="@dimen/padding_common_large">
+    android:paddingHorizontal="@dimen/row_item_margin_horizontal"
+    android:paddingTop="@dimen/row_item_margin_vertical">
 
-    <ImageView
-        android:id="@+id/even_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="@dimen/padding_common_medium"
-        app:layout_constraintEnd_toStartOf="@+id/even_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/even_title"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
         android:id="@+id/even_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Folk Dances with Live music workshops: Jordan Norway – Folk Dances with Live Music"
         android:textColor="@color/titleColor"
         android:textSize="@dimen/event_name_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/even_image"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/even_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kaikukatu 4, Helsinki"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/even_title"
+        app:layout_constraintTop_toBottomOf="@+id/even_title" />
 
     <TextView
         android:id="@+id/even_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:maxLines="5"
+        android:ellipsize="end"
+        android:maxLines="3"
         android:paddingVertical="@dimen/row_item_margin_vertical"
-        android:text="TextView"
+        android:text="Yuri’s Night -tapahtumassa muistetaan kosmonautti Juri Gagarinin historiallista avaruuslentoa. Lenin-museolla Yuri’s Nightia juhlitaan Gagarin-aiheisessa sähkömusiikin konsertissa. Tule virittäytymään aitoon avaruustunnelmaan ja antaudu painovoimaa uhmaavien rytmien ja intergalaktisen ambienssin vietäväksi!</p>\n<p>Ainutlaatuisessa konsertissa kuullaan Tampereen konservatorion musiikkiteknologian opiskelijoiden säveltämiä kappaleita ja nähdään musiikin päälle sovitettua videotaidetta. Opiskelijat ovat muokanneet Lenin-museon kokoelmien neuvostoliittolaisia propagandaelokuvia ja yhdistäneet näiden kuvaa ja ääntä säveltämäänsä musiikkiin. Opiskelijat myös esittelevät teoksiaan ja kertovat niiden tekemisestä.</p>\n<p>Space Party alkaa kello 18. Sisäänpääsy tapahtumalipulla alennettuun 5 euron hintaan. Sisäänpääsy myös museokortilla.</p>\n<p>&nbsp;</p>\n"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/even_image"
-        app:layout_constraintTop_toBottomOf="@+id/even_title"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/even_address" />
+
+
+    <TextView
+        android:id="@+id/even_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:text="@string/language"
+        android:textSize="@dimen/event_description_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/even_description"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/row_item_margin_vertical"
+        android:src="@drawable/ic_time"
+        app:layout_constraintBottom_toBottomOf="@+id/even_time"
+        app:layout_constraintEnd_toStartOf="@+id/even_time"
+        app:layout_constraintTop_toTopOf="@+id/even_time" />
+
+    <TextView
+        android:id="@+id/even_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:textSize="@dimen/event_description_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/even_description"
+        tools:text="September 21, 2020" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
